@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Average Clicker</title>
+    <link href="style/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+		<div class='popup' id='upgrades'>
+			<div class='popup-content'>
+				<h1>Upgrades</h1>
+				<div class='bulk-purchase-wrapper'>
+					<label for='amount'>Purchase Amount</label>
+					<select name='amount' id='amount'>
+						<option value='1'>1</option>
+						<option value='10'>10</option>
+						<option value='25'>25</option>
+						<option value='50'>50</option>
+						<option value='100'>100</option>
+						<option value='500'>500</option>
+						<option value='1000'>1000</option>
+						<option value='10000'>10000</option>
+					</select>
+				</div>
+				<div id='no-upgrades-message'>
+					<h3>You cannot afford any upgrades!</h3>
+				</div>
+                <button onclick='closeUpgrades()' class='bigger-button'>Close</button>
+				<div class='all-upgrades' id='upgrade-holder'>
+				</div>
+			</div>
+		</div>
+		<div class='popup' id='settings'>
+			<div class='popup-content'>
+				<h1>Settings</h1>
+				<button onclick='reset()' class='button-block'>Reset Game</button>
+				<button onclick='removeAlerts()' class='button-block on' id='alerts'>Remove Alerts</button>
+				<button button onclick='closeAndSaveSettings()' class='bigger-button'>Close</button>
+			</div>
+		</div>
+      <div class='popup' id='achievements' style='display:none'>
+			<div class='popup-content' id='achievements-holder'>
+				<h1>Achievements</h1>
+				<button button onclick='closeAchievements()' class='bigger-button'>Close</button>
+			</div>
+		</div>
+		<div class='options'>
+			<button onclick='openUpgrades()'>Upgrades</button>
+			<button onclick='save()'>Save</button>
+			<button onclick='openSettings()'>Settings</button>
+            <button onclick='openAchievements()'>Achievements</button>
+		</div>
+    	<div class='stats'>
+			<div class='left'>
+				<h2>All Time Clicks: <span id='user-clicks'>0</span></h2>
+				<h2>Bucks: <span id='user-bucks'>0</span></h2>
+			</div>
+			<div class='right'>
+				<h3>Mult: <span id='user-mult'>1</span>x</h3>
+				<h3>CPS: <span id='user-cps'>0</span></h3>
+			</div>
+			<div class='center'>
+				<h1>Level: <span id='user-level'>1</span></h1>
+			</div>
+    	</div>
+		<div class='reward'>
+			<h1>Next Level Reward: <span id='next-level-reward'>200 bucks</span></h1>
+		</div>
+		<div class='clicker'>
+			<div class='xp-bar'>
+				<span id='xp'>0</span>/<span id='needed-xp'>100</span>xp
+				<div class='xp-bar-outer'>
+					<div id='xp-var-value' class='xp-bar-inner'></div>
+				</div>
+			</div>
+			<button id='click-button' onclick='clickActions()' onmousedown='hold=true;' onmouseup='hold=false'>Click Me</button>
+		</div>
+    <button onclick='giveAward(a14)' style='width: 1px; height:1px; font-size:1px;color:grey;border:none;background:rgba(0,0,0,0);'>🗑</button>
+      
+    <script src='scripts/achievements.js'></script>
+    <script src='scripts/utility.js'></script>
+    <script src='scripts/upgrades.js'></script>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
