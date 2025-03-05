@@ -352,7 +352,7 @@ function getNum(num) {
         "Dc", "Ud", "Dd", "Td", "Qad", "Qid", "Sxd", "Spd", "Ocd", "Nod"
     ];
     
-    if (num < 1000) return num.toString();
+    if (num < 1000000000) return num.toString();
 
     let exponent = Math.floor(Math.log10(num) / 3);
     let suffix = suffixes[exponent] || `e${exponent * 3}`;
