@@ -12,6 +12,7 @@ html, body {
     margin: 0;
     padding: 0;
     transform: scale(90%);
+	overflow: hidden;
     min-height: 100vh; /* Ensures content fits without overflow */
     width: 100%;
     text-align: center;
