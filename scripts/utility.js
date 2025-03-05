@@ -16,3 +16,9 @@ function openAchievements() {
 function closeAchievements() {
     document.getElementById('achievements').style.display = 'none';
 }
+function openHelp() {
+    document.getElementById('help').style.display = 'block';
+}
+function closeHelp() {
+    document.getElementById('help').style.display = 'none';
+}
