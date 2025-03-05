@@ -20,7 +20,7 @@ var alerts          = false;
 var upgradesAdded = false;
 
 
-var hacker = true; // you aren't a hacker your a loser
+var hacker = false; // you aren't a hacker your a loser
 
 // Hahaha get Shrekked
 
@@ -54,7 +54,6 @@ I really have no idea why I put that there - invisibleone
 
 //var upgrade = new Upgrade("", 0, 'unlimited', 0, 0, "", "u-"); // example
 
-
 var u1 = new Upgrade('Auto Clicker', 200, 'unlimited', 0, 1, "Click Faster", 'u-1');
 var u2 = new Upgrade("Fingers", 150, 'unlimited', 5, 0, "Fast flying fingers to click while you cant", "u-2");
 var u3 = new Upgrade("One Foot", 200, 'unlimited', -3, 3, "The ugly foot is quick clicking, but gets in the way and slows down parts of your operation", "u-3");
@@ -63,7 +62,7 @@ var u5 = new Upgrade("Two Feet", 1000, 'unlimited', -6, 9, "Twice the feet... Th
 var u6 = new Upgrade("Roblox Player", 3500, 'unlimited', 5, 5, "Almost as bad as a scratch dev, but at least he doesn't claim to code", "u-6");
 var u7 = new Upgrade("One Hand", 10000, 'unlimited', 10, 10, "One human hand, removed from the body -jk", "u-7");
 var u8 = new Upgrade("Two Hands", 15000, 'unlimited', 20, 20, "Two human hands, twice as fast", "u-8");
-var u9 = new Upgrade("Roblox Dev", 30000, 'unlimited', -100, 50, "Roblox Dev. Most of his time spent coding 'hacks' for adoptme, but whatever...", "u-9");
+var u9 = new Upgrade("Roblox Dev", 30000, 'unlimited', 100, 50, "Roblox Dev. Most of his time spent coding 'hacks' for adoptme, but whatever...", "u-9");
 var u10 = new Upgrade("Toddler", 50000, 'unlimited', 35, 35, "Fast and cheap", "u-10");
 var u11 = new Upgrade("Octopus", 80000, 8, -8, 80, "Eight arms for highspeed clicking", "u-11");
 var u12 = new Upgrade("Horse", 100000, 'unlimited', 200, -10, "Jumps up and down on the buttons", "u-12");
@@ -87,7 +86,7 @@ var u29 = new Upgrade("Binary Algorithm", 600000000000, 'unlimited', 1000000, -5
 var u30 = new Upgrade("Recursive Algorithm", 1000000000000, 'unlimited', -500000, 1000000, "Like Binary search but harder to understand", "u-30");
 var u31 = new Upgrade("Basic AI", 2000000000000, 'unlimited', 0, 5000000, "Hmmm... Looks more like you just put if statements for all the possible inputs", "u-31");
 var u32 = new Upgrade("Advanced AI", 10000000000000, 'unlimited', 0, 800000000, "Finally, an actual AI", "u-32");
-var u33 = new Upgrade("Google AI", 100000000000000, 1, -10000000, 1000000000, "WE ARE NOT GOING TO TAKE OVER THE WORLD - AI", "u-33"); // one bil
+var u33 = new Upgrade("Google AI", 100000000000000, 100000, -10000000, 1000000000, "WE ARE NOT GOING TO TAKE OVER THE WORLD - AI", "u-33"); // one bil
 var u34 = new Upgrade("Space Station", 500000000000000, 'unlimited', 50000000000, -1000000, "Time to begin the world domination plan. Space Stations will allow you to monitor earth from above", "u-34");
 var u35 = new Upgrade("Cookie Clicker Player", 7500000000000000, 'unlimited', 0, 25000000000, "Hardened by years of clicking experience, they only know how to click, click, click, click...", "u-35");
 var u36 = new Upgrade("Satellite", 100000000000000, 'unlimited', 1000000000000, -1000000000, "World Domination part two: Control Communication", "u-36");
@@ -124,10 +123,10 @@ var upgrades = [u1, u2, u3, u4, u5, u6, u7, u8, u9, u10, u11, u12, u13, u14, u15
 // AWARDS
 // Format: name, img, color, reason, id
 
-var a1 = new Achievement("Defualt Achievement", 'defualt.jpg', 'tan', "This is the defualt Achievement that everybody gets. You aren't anything special.", 'a-1');
+var a1 = new Achievement("Default Achievement", 'defualt.jpg', 'tan', "This is the default Achievement that everybody gets. You aren't anything special.", 'a-1');
 var a2 = new Achievement("Level 100", "level100.webp", "rgb(205, 127, 50)", "You reached level 100! Great job", "a-2");
 var a3 = new Achievement("Level 1000", "level1000.jpg", "rgb(211, 211, 211)", "You reached level 1,000. Awesome!", "a-3");
-var a4 = new Achievement("Level 10000", "level10000.jpg", "rgb(255, 215, 0)", "You reached level 10,000! Now go touch some grass", "a-4");
+var a4 = new Achievement("Level 10, 000", "level10000.jpg", "rgb(255, 215, 0)", "You reached level 10,000! Now go touch some grass", "a-4");
 var a5 = new Achievement("Super Clicker", "flash.jpg", "rgb(209, 32, 8)", "Surpass 1 Billion all time clicks", "a-5");
 var a6 = new Achievement("Richy Pants", "rich.jpg", "white", "Have over 10,000,000,000 bucks at one time", "a-6");
 var a7 = new Achievement("Ḧ̷͈̪́A̷͚͂ͅC̶̖̱̔̋Ǩ̴̠͚̚E̷̝̩͒͒R̴̠̠̅͆", "hacker.jpg", "rgb(115, 0, 0)", "Change Hacker to true", "a-7");
@@ -139,8 +138,24 @@ var a12 = new Achievement("Red Planet", "mars.jpg", "red", "Mars is yours!", "a-
 var a13 = new Achievement("On the brink of insanity", "bob2.webp", "white", "Have over 100,000,000,000,000,000 bucks", "a-13");
 var a14 = new Achievement("Garbage Collector", "garbagecollector.jpg", "grey", "Collect the garbage", "a-14");
 var a15 = new Achievement("You have beaten the game", "dontask.jpg", "white", "Reach level 1,000,000", "a-15");
+var a16 = new Achievement("Level 1", "level1.jpg", "bronze", "Welcome to Level 1! Every journey begins with a single step.", "a-16");
+var a17 = new Achievement("Level 10", "level10.jpg", "silver", "You've reached Level 10! Keep up the momentum.", "a-17");
+var a18 = new Achievement("Level 50", "level50.jpg", "gold", "Level 50 achieved! You're halfway to 100.", "a-18");
+var a19 = new Achievement("Level 2,500", "level2500.jpg", "platinum", "Incredible! Level 2,500 reached.", "a-19");
+var a20 = new Achievement("Level 5,000", "level5000.jpg", "diamond", "Outstanding! Level 5,000 milestone.", "a-20");
+var a21 = new Achievement("Level 100,000", "level100000.jpg", "master", "Phenomenal! Level 100,000 achieved.", "a-21");
 
-var a_all = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15];
+var a22 = new Achievement("Millionaire", "million.jpg", "green", "Accumulate 1,000,000 bucks.", "a-22");
+var a23 = new Achievement("Deca-Millionaire", "10million.jpg", "blue", "Accumulate 10,000,000 bucks.", "a-23");
+var a24 = new Achievement("Cent-Millionaire", "100million.jpg", "purple", "Accumulate 100,000,000 bucks.", "a-24");
+var a25 = new Achievement("Billionaire", "billion.jpg", "red", "Accumulate 1,000,000,000 bucks.", "a-25");
+var a26 = new Achievement("Deca-Billionaire", "10billion.jpg", "orange", "Accumulate 10,000,000,000 bucks.", "a-26");
+var a27 = new Achievement("Cent-Billionaire", "100billion.jpg", "yellow", "Accumulate 100,000,000,000 bucks.", "a-27");
+var a28 = new Achievement("Trillionaire", "trillion.jpg", "silver", "Accumulate 1,000,000,000,000 bucks.", "a-28");
+var a29 = new Achievement("Deca-Trillionaire", "10trillion.jpg", "gold", "Accumulate 10,000,000,000,000 bucks.", "a-29");
+
+
+var a_all = [a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29];
 
 var achievements = [];
 
@@ -149,11 +164,26 @@ function checkAchievements() {
     if (!achievements.includes(a1)) {
         giveAward(a1);
     }
+    if (level >= 1 && !achievements.includes(a16)) {
+        giveAward(a16);
+    }
+    if (level >= 10 && !achievements.includes(a17)) {
+        giveAward(a17);
+    }
+    if (level >= 50 && !achievements.includes(a18)) {
+        giveAward(a18);
+    }
     if (level >= 100 && !achievements.includes(a2)) {
         giveAward(a2);
     }
     if (level >= 1000 && !achievements.includes(a3)) {
         giveAward(a3);
+    }
+    if (level >= 2500 && !achievements.includes(a19)) {
+        giveAward(a19);
+    }
+    if (level >= 5000 && !achievements.includes(a20)) {
+        giveAward(a20);
     }
     if (level >= 10000 && !achievements.includes(a4)) {
         giveAward(a4);
@@ -161,8 +191,29 @@ function checkAchievements() {
     if (level >= 1000000 && !achievements.includes(a15)) {
         giveAward(a15);
     }
+    if (bucks >= 1000000 && !achievements.includes(a22)) {
+        giveAward(a22);
+    }
+    if (bucks >= 10000000 && !achievements.includes(a23)) {
+        giveAward(a23);
+    }
+    if (bucks >= 100000000 && !achievements.includes(a24)) {
+        giveAward(a24);
+    }
+    if (bucks >= 1000000000 && !achievements.includes(a25)) {
+        giveAward(a25);
+    }
     if (bucks >= 10000000000 && !achievements.includes(a6)) {
         giveAward(a6);
+    }
+    if (bucks >= 100000000000 && !achievements.includes(a27)) {
+        giveAward(a27);
+    }
+    if (bucks >= 1000000000000 && !achievements.includes(a28)) {
+        giveAward(a28);
+    }
+    if (bucks >= 10000000000000 && !achievements.includes(a29)) {
+        giveAward(a29);
     }
     if (bucks >= 100000000000000000 && !achievements.includes(a13)) {
         giveAward(a13);
@@ -185,9 +236,10 @@ function checkPurchaseAchievements(item) {
     } else if (item == 'Earth' && !achievements.includes(a11)) {
         giveAward(a11);
     } else if (item == 'Mars' && !achievements.includes(a12)) {
-        giveAward(a12)
+        giveAward(a12);
     }
 }
+
 
 function giveAward(award) {
     // TODO: Make a fancy banner
@@ -292,26 +344,22 @@ function restore() {
 	}
 }
 
-
 function getNum(num) {
-	if (shortenNumbers) {
-		let numStr = ""+num;
-		var finalString = "";
-		var count = 0;
-		for (var i=numStr.length-1; i>-1; i--) {
-			if (count == 3) {
-				count = 0;
-				finalString += ','+numStr[i];
-			} else {
-				finalString += numStr[i];
-			}
-			count ++;
-		}
-		return finalString.split("").reverse().join("");
-	} else {
-		return num
-	}
+    if (!shortenNumbers) return num;
+
+    const suffixes = [
+        "", "K", "M", "B", "T", "Qa", "Qi", "Sx", "Sp", "Oc", "No", 
+        "Dc", "Ud", "Dd", "Td", "Qad", "Qid", "Sxd", "Spd", "Ocd", "Nod"
+    ];
+    
+    if (num < 1000) return num.toString();
+
+    let exponent = Math.floor(Math.log10(num) / 3);
+    let suffix = suffixes[exponent] || `e${exponent * 3}`;
+
+    return (num / Math.pow(10, exponent * 3)).toFixed(2) + suffix;
 }
+
 
 function update() {
 	document.getElementById('user-clicks').innerHTML = getNum(allTimeClicks);
