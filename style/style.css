@@ -367,3 +367,7 @@ ul {
     text-align: start;
     overflow: hidden;
 }
+
+#x {
+	color: grey;
+}
